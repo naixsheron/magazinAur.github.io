@@ -79,3 +79,29 @@ function cautaProduse() {
     }
   });
 }
+const openPopupButton = document.getElementById("open-popup");
+const closePopupButton = document.getElementById("close-popup");
+const popup = document.querySelector(".popup");
+
+openPopupButton.addEventListener("click", () => {
+  popup.style.display = "block";
+});
+
+closePopupButton.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+// login si register
+
+let log = document.getElementById("login");
+let reg = document.getElementById("register");
+let btn_l = document.getElementById("btn_l");
+function register() {
+  log.style.left = "-400px";
+  reg.style.left = "50px";
+  btn_l.style.left = "110px";
+}
+function login() {
+  log.style.left = "50px";
+  reg.style.left = "450px";
+  btn_l.style.left = "0";
+}

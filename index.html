@@ -19,13 +19,76 @@
           <img src="img/logo11.png" />
         </div>
         <div class="right_content">
-          <div class="link_cont">
-            <i class="bx bxs-user-account"></i>
-            <span class="account_text">Intra in cont</span>
-          </div>
           <div class="link_cos">
             <i class="bx bx-cart-add"></i>
             <span class="account_text">Cos</span>
+          </div>
+          <div id="open-popup">
+            <div class="link_cont">
+              <i class="bx bxs-user-account"></i>
+              <span class="account_text">Intra in cont</span>
+            </div>
+          </div>
+
+          <div class="popup">
+            <div class="popup-content">
+              <div class="button-box">
+                <div id="btn_l"></div>
+                <button type="button" class="toggle-btn" onclick="login()">
+                  Login
+                </button>
+                <button type="button" class="toggle-btn" onclick="register()">
+                  Register
+                </button>
+              </div>
+              <div id="close-popup"><i class="bx bx-exit"></i></div>
+              <form id="login" class="input-group">
+                <input
+                  type="email"
+                  class="input-field"
+                  placeholder="Adresa Email"
+                  required
+                />
+                <input
+                  type="password"
+                  class="input-field"
+                  placeholder="Parola"
+                  required
+                />
+                <input type="checkbox" class="check-box" /><span
+                  class="span-rem"
+                  >Salveaza Parola</span
+                >
+                <button type="submit" class="submit-btn">Logheaza-te</button>
+              </form>
+              <form id="register" class="input-group">
+                <input
+                  type="email"
+                  class="input-field"
+                  placeholder="Adresa Email"
+                  required
+                />
+                <input
+                  type="password"
+                  class="input-field"
+                  placeholder="Parola"
+                  required
+                />
+                <input
+                  type="password"
+                  class="input-field"
+                  placeholder="Repeta Parola"
+                  required
+                />
+                <input type="checkbox" class="check-box" /><span
+                  class="span-rem"
+                  >Accepta termeni si conditiile</span
+                >
+                <button type="submit" class="submit-btn">
+                  Inregistreaza-te
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </header>
