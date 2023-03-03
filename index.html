@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="Ro-ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Page</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header>
+        <div class="left_content"></div>
+        <div class="middle_content">
+          <img src="img/logo11.png" />
+        </div>
+        <div class="right_content">
+          <div class="link_cont">
+            <i class="bx bxs-user-account"></i>
+            <span class="account_text">Intra in cont</span>
+          </div>
+          <div class="link_cos">
+            <i class="bx bx-cart-add"></i>
+            <span class="account_text">Cos</span>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <aside class="left_container">
+          <nav class="sidebar open">
+            <div class="first_head">
+              <div class="image_text">
+                <span class="image">
+                  <img
+                    src="img/vecteezy_at-logo-monogram-emblem-style-with-crown-shape-design-template_.jpg"
+                    alt="logo"
+                /></span>
+                <div class="text first-head-text">
+                  <span class="name">Aurul Tau</span>
+                  <span class="profesion">Comercializare Aur</span>
+                </div>
+              </div>
+              <i class="bx bx-chevron-right toggle" id="openBtn"></i>
+            </div>
+            <div class="menu-bar">
+              <div class="menu">
+                <li class="search-box">
+                  <i class="bx bx-search icon"></i>
+                  <input type="search" placeholder="Cauta..." />
+                </li>
+                <ul class="menu-links">
+                  <li class="nav-link">
+                    <a href="#" id="toateProdusele" onclick="sorteazaProduse()">
+                      <i class="bx bxs-coin-stack icon"></i>
+                      <span class="text nav-text">Toate Produsele</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a
+                      href="#"
+                      id="sort-aurul"
+                      onclick="sorteazaProduse('aurul')"
+                    >
+                      <i class="bx bxs-coin icon"></i>
+                      <span class="text nav-text">Monede Aur</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a
+                      href="#"
+                      id="sort-lingouAur"
+                      onclick="sorteazaProduse('lingouAur')"
+                    >
+                      <i class="bx bxs-rectangle icon"></i>
+                      <span class="text nav-text">Lingouri Aur</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a
+                      href="#"
+                      id="sort-argint"
+                      onclick="sorteazaProduse('argint')"
+                    >
+                      <i class="bx bx-coin icon"></i>
+                      <span class="text nav-text">Monede Argint</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a
+                      href="#"
+                      id="sort-lingouArg"
+                      onclick="sorteazaProduse('lingouArg')"
+                    >
+                      <i class="bx bx-rectangle icon"></i>
+                      <span class="text nav-text">Lingouri Argint</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a
+                      href="#"
+                      id="sort-accesorii"
+                      onclick="sorteazaProduse('accesorii')"
+                    >
+                      <i class="bx bx-layer icon"></i>
+                      <span class="text nav-text">Accesorii</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="#">
+                      <i class="bx bx-history icon"></i>
+                      <span class="text nav-text">Despre Aur</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="#">
+                      <i class="bx bx-history icon"></i>
+                      <span class="text nav-text">Despre Argint</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bottom-content">
+                <li class="nav-link">
+                  <a href="#">
+                    <i class="bx bxs-hand icon"></i>
+                    <span class="text nav-text">5 Motive Sa Investesti</span>
+                  </a>
+                </li>
+              </div>
+            </div>
+          </nav>
+        </aside>
+        <main class="middle_container" id="containerProduse">
+          <div class="row">
+            <div class="col">
+              <div class="card_box card" id="aurul">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img src="img/vienna2.png" />
+                <h2 class="card_text text_center">Vinna Philarmonika</h2>
+                <p class="card_text_p text_center">1 Oz Aur Pur</p>
+                <h3 class="card_text_pret text_center">Pret: 9252RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card_box card" id="argint">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img src="img/viena_arg.png" />
+                <h2 class="card_text text_center">Vinna Philarmonika</h2>
+                <p class="card_text_p text_center">1 Oz Argint Pur</p>
+                <h3 class="card_text_pret text_center">Pret: 165RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card_box card" id="argint">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img src="img/2023-1-oz-american-silver-eagle-obv.jpg" />
+                <h2 class="card_text text_center">American Eagle</h2>
+                <p class="card_text_p text_center">1 Oz Argint Pur</p>
+                <h3 class="card_text_pret text_center">Pret: 170RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card_box card" id="aurul">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img src="img/krunger.jpg" />
+                <h2 class="card_text text_center">Krugerrand</h2>
+                <p class="card_text_p text_center">1 Oz Aur Pur</p>
+                <h3 class="card_text_pret text_center">Pret: 9295RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card_box card" id="aurul">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img src="img/canadagold.jpg" />
+                <h2 class="card_text text_center">Maple Leaf</h2>
+                <p class="card_text_p text_center">1 Oz Aur Pur</p>
+                <h3 class="card_text_pret text_center">Pret: 9352RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card_box card" id="aurul">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img src="img/brita.jpg" />
+                <h2 class="card_text text_center">Britannia</h2>
+                <p class="card_text_p text_center">1 Oz Aur Pur</p>
+                <h3 class="card_text_pret text_center">Pret: 9430RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card_box card" id="lingouAur">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img src="img/10-gramm-av.png" />
+                <h2 class="card_text text_center">Lingou Aur</h2>
+                <p class="card_text_p text_center">10 gr Aur Pur</p>
+                <h3 class="card_text_pret text_center">Pret: 3000RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card_box card" id="lingouAur">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img src="img/50-gramm-av.png" />
+                <h2 class="card_text text_center">Lingou Aur</h2>
+                <p class="card_text_p text_center">50 gr Aur Pur</p>
+                <h3 class="card_text_pret text_center">Pret: 15250RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card_box card" id="lingouAur">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img src="img/1-gramm-av.png" />
+                <h2 class="card_text text_center">Lingou Aur</h2>
+                <p class="card_text_p text_center">1 gr Aur Pur</p>
+                <h3 class="card_text_pret text_center">Pret: 326RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card_box card" id="lingouArg">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img src="img/arglin.jpg" />
+                <h2 class="card_text text_center">Lingou Argint</h2>
+                <p class="card_text_p text_center">1 Oz Argint Pur</p>
+                <h3 class="card_text_pret text_center">Pret: 155RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card_box card" id="lingouArg">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img src="img/5-oz-silver-germania-mint-cast-bar-1.jpg" />
+                <h2 class="card_text text_center">Lingou Argint</h2>
+                <p class="card_text_p text_center">5 Oz Argint Pur</p>
+                <h3 class="card_text_pret text_center">Pret: 750RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card_box card" id="lingouArg">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img src="img/1000g-silver-germania-mint-cast-bar-1.jpg" />
+                <h2 class="card_text text_center">Lingou Argint</h2>
+                <p class="card_text_p text_center">1 Kg Argint Pur</p>
+                <h3 class="card_text_pret text_center">Pret: 4326RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card_box card" id="accesorii">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img
+                  src="img/100g-european-mint-999-fine-silver-bullion-bar-front.jpg"
+                />
+                <h2 class="card_text text_center">Cutie Lingou</h2>
+                <p class="card_text_p text_center">1 Bucata</p>
+                <h3 class="card_text_pret text_center">Pret: 15RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card_box card" id="aurul">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img src="img/2022-1-oz-american-gold-eagle-bu-rev.jpg" />
+                <h2 class="card_text text_center">American Eagle</h2>
+                <p class="card_text_p text_center">1 Oz Aur Pur</p>
+                <h3 class="card_text_pret text_center">Pret: 9750RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card_box card" id="aurul">
+                <div class="corner-label"><p>in stoc</p></div>
+                <div class="corner-fav"><i class="bx bxs-heart"></i></div>
+                <img src="img/2022-australia-1-oz-gold-kangaroo-bu-rev.jpg" />
+                <h2 class="card_text text_center">Kangaroo</h2>
+                <p class="card_text_p text_center">1 Oz Aur Pur</p>
+                <h3 class="card_text_pret text_center">Pret: 8958RON</h3>
+                <button class="btn_card">Cumpara</button>
+              </div>
+            </div>
+          </div>
+        </main>
+        <aside class="right_container">
+          <nav class="sidebar_r close">
+            <div class="right_head">
+              <div class="image_right">
+                <span class="image_r">
+                  <i class="bx bxs-user-check"></i>
+                </span>
+                <div class="text right-head-text">
+                  <span class="right_name"> Contul Tau</span>
+                  <span class="right_profesion">Cumpara / Vinde Aur</span>
+                </div>
+              </div>
+              <i class="bx bx-chevron-left toggle_r" id="closeBtn"></i>
+            </div>
+            <div class="menu-bar">
+              <div class="menu">
+                <ul class="menu-links">
+                  <li class="nav-link">
+                    <a href="#">
+                      <i class="bx bx-home-alt icon"></i>
+                      <span class="text nav-text">Panou de Comanda</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="#">
+                      <i class="bx bx-bar-chart-alt-2 icon"></i>
+                      <span class="text nav-text">Profit</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="#">
+                      <i class="bx bx-bell icon"></i>
+                      <span class="text nav-text">Notificari</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="#">
+                      <i class="bx bx-analyse icon"></i>
+                      <span class="text nav-text">Analiza Piata</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="#">
+                      <i class="bx bx-heart icon"></i>
+                      <span class="text nav-text">Favorite</span>
+                    </a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="#">
+                      <i class="bx bx-wallet-alt icon"></i>
+                      <span class="text nav-text">Portofel</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="nav-link log_out">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i class="bx bx-log-out icon"></i>
+                        <span class="text nav-text">Iesire din cont</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </aside>
+      </div>
+      <footer></footer>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
