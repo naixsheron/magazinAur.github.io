@@ -268,7 +268,7 @@ header {
   background: var(--green-blue);
   border-top-right-radius: 12%;
   transition: var(--tran-5);
-  z-index: 9999;
+  z-index: 99;
 }
 .sidebar.open {
   left: 0;
@@ -515,7 +515,7 @@ li {
   width: 250px;
   background: var(--green-blue);
   transition: var(--tran-5);
-  z-index: 999;
+  z-index: 9;
   border-top-left-radius: 12%;
 }
 .sidebar_r.close {
@@ -924,5 +924,8 @@ li {
   .card_box .corner-fav {
     top: 0.7rem;
     font-size: 20px;
+  }
+  .popup-content .x_pop {
+    margin-right: 1rem;
   }
 }
