@@ -61,6 +61,7 @@ header {
   z-index: var(--z-fixed);
   padding: 1rem 2rem;
   background-color: var(--space-cadet);
+  border-bottom: 2px solid #ead94c;
 }
 
 .left_content {
@@ -269,6 +270,7 @@ header {
   border-top-right-radius: 12%;
   transition: var(--tran-5);
   z-index: 7;
+  border-right: 2px solid #ead94c;
 }
 .sidebar.open {
   left: 0;
@@ -517,6 +519,7 @@ li {
   transition: var(--tran-5);
   z-index: 9;
   border-top-left-radius: 12%;
+  border-left: 2px solid #ead94c;
 }
 .sidebar_r.close {
   width: 78px;
@@ -701,16 +704,20 @@ li {
   }
   .card_box img {
     width: 8rem;
+    margin-bottom: -5px;
   }
   .card_box .card_text {
     font-size: 1rem;
     font-weight: var(--font-semi-bold);
+    margin-bottom: -5px;
   }
   .card_box .card_text_p {
     font-size: 0.8rem;
+    margin-bottom: -5px;
   }
   .card_box .card_text_pret {
     font-size: 1rem;
+    margin-bottom: -1px;
   }
   .sidebar {
     width: 20%;
@@ -837,7 +844,7 @@ li {
   .sidebar .text,
   .sidebar_r .text {
     font-size: 0.7rem;
-    margin-left: -5px;
+    margin-left: -10px;
   }
   .sidebar .image_text img {
     width: 1.7rem;
@@ -880,6 +887,10 @@ li {
   .sidebar_r .image_right .bx {
     font-size: 2rem;
   }
+  .sidebar_r li .nav-text {
+    margin-left: -20px;
+  }
+
   .sidebar_r .image_right {
     margin-left: 6px;
   }
@@ -900,17 +911,16 @@ li {
   }
   .card_box .card_text {
     font-size: 0.8rem;
-    margin-top: -0.2rem;
+
     font-weight: var(--font-semi-bold);
   }
   .card_box .card_text_p {
     font-size: 0.6rem;
-    margin-top: -0.4rem;
+    margin-bottom: 5px;
   }
   .card_box .card_text_pret {
     font-size: 0.8rem;
     margin-top: -0.2rem;
-    margin-bottom: -0.1rem;
   }
   .btn_card {
     font-size: 0.8rem;
