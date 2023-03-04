@@ -108,7 +108,7 @@ header {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 9999999999;
 }
 .toggle-btn {
   padding: 10px 30px;
@@ -790,23 +790,104 @@ li {
   }
   .col-12 {
     width: 100%;
+    margin-left: 1.2rem;
   }
-}
-.card_box {
-  width: 100%;
-}
-.left_container {
-  width: 120px;
-}
-.right_container {
-  width: 120px;
-}
-.middle_container {
-  width: 200px;
-}
-.sidebar {
-  width: 30%;
-}
-.sidebar_r {
-  width: 30%;
+  header {
+    height: 5rem;
+  }
+  .right_content .account_text {
+    font-size: 0.7rem;
+    margin-right: -1.5rem;
+  }
+  .link_cont .bx,
+  .link_cos .bx {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  .left_logo img {
+    width: 4rem;
+  }
+  .middle_content img {
+    width: 7rem;
+    height: 4rem;
+  }
+  .card_box {
+    width: 100%;
+  }
+  .left_container {
+    width: 120px;
+  }
+  .right_container {
+    width: 120px;
+  }
+  .middle_container {
+    width: 200px;
+  }
+  .sidebar {
+    width: 29%;
+
+    margin-top: -5rem;
+  }
+  .sidebar_r {
+    width: 27%;
+    margin-top: -5rem;
+  }
+  .sidebar .text,
+  .sidebar_r .text {
+    font-size: 0.7rem;
+    margin-left: -5px;
+  }
+  .sidebar .image_text img {
+    width: 1.7rem;
+    margin-left: -7px;
+  }
+  .first-head-text .name {
+    font-size: 1rem;
+    margin-left: -2rem;
+  }
+  .first-head-text .profesion {
+    font-size: 0.6rem;
+    margin-left: -2rem;
+  }
+  .sidebar li {
+    height: 30px;
+    margin-left: -15px;
+  }
+  .sidebar li .icon {
+    font-size: 10px;
+    min-width: 40px;
+    margin-left: -10px;
+  }
+  .sidebar.close {
+    width: 35px;
+  }
+
+  .sidebar_r.close {
+    width: 40px;
+  }
+  .sidebar_r li {
+    height: 30px;
+  }
+  .sidebar_r li .icon {
+    font-size: 10px;
+    margin-left: -16px;
+  }
+  .sidebar_r.close .image_right .bx {
+    font-size: 2rem;
+  }
+  .sidebar_r .image_right .bx {
+    font-size: 2rem;
+  }
+  .sidebar_r .image_right {
+    margin-left: 6px;
+  }
+  .right-head-text .right_name {
+    font-size: 1rem;
+    margin-left: -2rem;
+  }
+  .right-head-text .right_profesion {
+    font-size: 0.6rem;
+    margin-left: -2rem;
+  }
 }
