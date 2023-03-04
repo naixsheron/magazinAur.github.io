@@ -51,7 +51,7 @@ function sorteazaProduse(categoria) {
   containerProduse.innerHTML = "";
   produse.forEach(function (produs, index) {
     // Adaugă un nou element div la fiecare 3 produse pentru a crea un nou rând
-    if (index % 3 === 0) {
+    if (index % 4 === 0) {
       const newRow = document.createElement("div");
       newRow.classList.add("row");
       containerProduse.appendChild(newRow);
@@ -105,3 +105,11 @@ function login() {
   reg.style.left = "450px";
   btn_l.style.left = "0";
 }
+
+const closeBtn = document.querySelector("#close-popup");
+const form = document.querySelector("form");
+
+closeBtn.addEventListener("click", () => {
+  popup.style.display = "none";
+  form.reset(); // Reset the form values
+});
