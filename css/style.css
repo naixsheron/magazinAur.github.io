@@ -814,6 +814,7 @@ li {
   }
   .card_box {
     width: 100%;
+    margin-bottom: -0.8rem;
   }
   .left_container {
     width: 120px;
@@ -889,5 +890,39 @@ li {
   .right-head-text .right_profesion {
     font-size: 0.6rem;
     margin-left: -2rem;
+  }
+  .card_box {
+    width: 100%;
+  }
+  .card_box img {
+    width: 6rem;
+    margin-top: -0.5rem;
+  }
+  .card_box .card_text {
+    font-size: 0.8rem;
+    margin-top: -0.2rem;
+    font-weight: var(--font-semi-bold);
+  }
+  .card_box .card_text_p {
+    font-size: 0.6rem;
+    margin-top: -0.4rem;
+  }
+  .card_box .card_text_pret {
+    font-size: 0.8rem;
+    margin-top: -0.2rem;
+    margin-bottom: -0.1rem;
+  }
+  .btn_card {
+    font-size: 0.8rem;
+    height: 1.3rem;
+  }
+  .card_box .corner-label {
+    width: 25px;
+    height: 40px;
+    font-size: 6px;
+  }
+  .card_box .corner-fav {
+    top: 0.7rem;
+    font-size: 20px;
   }
 }
