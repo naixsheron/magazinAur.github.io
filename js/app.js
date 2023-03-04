@@ -113,3 +113,128 @@ closeBtn.addEventListener("click", () => {
   popup.style.display = "none";
   form.reset(); // Reset the form values
 });
+//favorite
+let favorites = [];
+
+// Select all elements with class "corner-fav"
+const favButtons = document.querySelectorAll(".corner-fav");
+
+// Loop through all "corner-fav" buttons
+favButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.classList.toggle("favorite"); // Toggle the "favorite" class on the clicked button
+
+    const cardId = button.closest(".card").getAttribute("id"); // Get the id of the closest card
+    const index = favorites.indexOf(cardId);
+
+    if (index === -1) {
+      // If the card is not in favorites, add it
+      favorites.push(cardId);
+    } else {
+      // If the card is already in favorites, remove it
+      favorites.splice(index, 1);
+    }
+
+    console.log(favorites); // Output the favorites array to the console
+  });
+});
+const favoriteButton = document.querySelector(".icon");
+const favoriteList = document.getElementById("favorite-list");
+
+let favoriteCards = [];
+
+// adaugă cardul favorit în lista de favorite
+function addFavorite(card) {
+  favoriteCards.push(card);
+  updateFavorites();
+}
+
+// actualizează lista de favorite și afișează numărul de carduri favorite
+function updateFavorites() {
+  favoriteList.innerHTML = "";
+  favoriteCards.forEach((card) => {
+    const li = document.createElement("li");
+    li.textContent = card.querySelector("h2").textContent;
+    favoriteList.appendChild(li);
+  });
+  const favoritesCount = document.querySelectorAll(".corner-fav.filled").length;
+  favoriteButton.nextElementSibling.textContent = `Favorite (${favoritesCount})`;
+}
+
+// gestionează evenimentul de click pe butonul de favorite
+favoriteButton.addEventListener("click", () => {
+  favoriteList.parentElement.classList.toggle("active");
+});
+
+// adaugă gestiunea evenimentului de click pentru fiecare card
+document.querySelectorAll(".corner-fav").forEach((card) => {
+  card.addEventListener("click", (event) => {
+    event.stopPropagation();
+    card.classList.toggle("filled");
+    const parentCard = card.parentElement;
+    if (card.classList.contains("filled")) {
+      addFavorite(parentCard);
+    } else {
+      const index = favoriteCards.indexOf(parentCard);
+      if (index > -1) {
+        favoriteCards.splice(index, 1);
+        updateFavorites();
+      }
+    }
+  });
+});
+
+// afișează numărul de carduri favorite la încărcarea paginii
+updateFavorites();
+// selectăm toate butoanele de inimă
+const favBtns = document.querySelectorAll(".corner-fav i");
+
+// iterăm prin fiecare buton și adăugăm un ascultător de eveniment pentru a trata clicul
+favBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    // prevenim comportamentul implicit al butonului
+    e.preventDefault();
+    // adăugăm/scoatem clasa 'active' la inima butonului
+    e.currentTarget.classList.toggle("active");
+    // adăugăm sau eliminăm cardul din lista de favorite
+    handleFavoriteClick(e.currentTarget.parentElement.parentElement.id);
+    // actualizăm numărul de carduri favorite afișate pe buton
+    updateFavoriteCount();
+  });
+});
+// selectam butonul de favorite
+const favoriteBtn = document.querySelector("#favorite-btn");
+
+// adaugam evenimentul click
+favoriteBtn.addEventListener("click", () => {
+  // selectam elementul ul in care vom afisa cardurile favorite
+  const favoriteList = document.querySelector("#favorite-list");
+
+  // golim lista de carduri favorite
+  favoriteList.innerHTML = "";
+
+  // iteram prin fiecare card
+  cards.forEach((card) => {
+    // verificam daca cardul este la favorite
+    if (card.isFavorite) {
+      // creem un nou element li pentru a adauga cardul la lista de favorite
+      const li = document.createElement("li");
+      li.textContent = card.title;
+      favoriteList.appendChild(li);
+    }
+  });
+
+  // afisam lista de favorite
+  document.querySelector(".favorites").classList.add("active");
+});
+function displayFavorites() {
+  const favorites = getFavorites();
+  console.log(favorites); // afișează favoritele în consolă pentru a verifica dacă funcția funcționează corect
+  const list = document.querySelector("#favorite-list");
+  list.innerHTML = "";
+  favorites.forEach((favorite) => {
+    const card = document.querySelector(`#${favorite}`);
+    const clone = card.cloneNode(true);
+    list.appendChild(clone);
+  });
+}

@@ -63,6 +63,9 @@ header {
   background-color: var(--space-cadet);
   border-bottom: 2px solid #ead94c;
 }
+.bxs-heart.active {
+  color: red;
+}
 
 .left_content {
   max-width: 20rem;
@@ -947,4 +950,8 @@ li {
   .popup-content {
     margin-top: -5rem;
   }
+}
+/*Favorite*/
+.favorite-list {
+  border: 1px solid yellow;
 }
