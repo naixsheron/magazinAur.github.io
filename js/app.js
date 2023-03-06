@@ -190,6 +190,14 @@ updateFavorites();
 const favBtns = document.querySelectorAll(".corner-fav i");
 
 // iterăm prin fiecare buton și adăugăm un ascultător de eveniment pentru a trata clicul
+function handleFavoriteClick(cardId) {
+  const cardIndex = cards.findIndex((card) => card.id === cardId);
+  if (cardIndex !== -1) {
+    cards[cardIndex].isFavorite = !cards[cardIndex].isFavorite;
+  }
+  saveToLocalStorage(cards);
+}
+
 favBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     // prevenim comportamentul implicit al butonului
@@ -214,6 +222,8 @@ favoriteBtn.addEventListener("click", () => {
   favoriteList.innerHTML = "";
 
   // iteram prin fiecare card
+  let cards = [];
+
   cards.forEach((card) => {
     // verificam daca cardul este la favorite
     if (card.isFavorite) {
@@ -238,3 +248,15 @@ function displayFavorites() {
     list.appendChild(clone);
   });
 }
+function updateFavoriteCount() {
+  const favoritesCount = document.querySelectorAll(".corner-fav.filled").length;
+  const favoriteCountElement = document.querySelector(".favorite-count");
+  favoriteCountElement.textContent = favoritesCount.toString();
+}
+const favoritButton = document.querySelector("#favorite-btn");
+favoritButton.addEventListener("click", () => {
+  const favoriteList = document.querySelector("#favorite-list");
+  favoriteList.innerHTML = "";
+  updateFavoriteCount();
+  favoriteList.parentElement.classList.toggle("active");
+});

@@ -952,6 +952,33 @@ li {
   }
 }
 /*Favorite*/
-.favorite-list {
-  border: 1px solid yellow;
+.favorites {
+  border: 1px solid magenta;
+  position: relative;
+}
+#favorite-list {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: -29rem;
+  margin-top: -20rem;
+}
+#favorite-list li {
+  border: 1px solid rgb(121, 0, 235);
+  color: white;
+  background-color: rgb(228, 84, 84);
+  padding: 1rem 2rem;
+  border-radius: 15%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.favorite-count {
+  position: absolute;
+  padding: 5px;
+  margin-left: 39px;
+  margin-bottom: 15px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
 }
